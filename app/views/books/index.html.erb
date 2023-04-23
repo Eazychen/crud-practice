@@ -1,0 +1,16 @@
+<h1>首頁</h1>
+
+<%= link_to  "新增", new_book_path %>
+
+<% @books.each do |book| %>
+<ul>
+    <li><%= link_to  "書名", book_path(book.id) %><%= book.title %></li>
+    <li>價格<%= book.price %></li>
+    <li>出版社<%= book.publishing %></li>
+    <li>作者<%= book.author %></li>
+    <li>簡介<%= book.intro %></li>
+    <li><%= link_to  "修改", edit_book_path(book.id) %></li>
+    <li><%= link_to  "刪除", book_path(book.id), method: 'delete', data: { confirm: 'Are you sure?' } %></li>
+
+</ul>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>新增</h1>
+
+
+<%= form_for (@book) do |form| %>
+    <div>
+        <%= form.label :title, '書名' %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :price, '價格' %>
+        <%= form.text_field :price %>
+    </div>
+    <div>
+        <%= form.label :publishing, '出版社' %>
+        <%= form.text_field :publishing %>
+    </div>
+    <div>
+        <%= form.label :author, '作者' %>
+        <%= form.text_field :author %>
+    </div>
+    <div>
+        <%= form.label :intro, '簡介' %>
+        <%= form.text_area :intro %>
+    </div>
+        <%= form.submit %>
+<% end %>
+
+
+
+      
